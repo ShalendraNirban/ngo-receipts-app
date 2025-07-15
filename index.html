@@ -1,17 +1,12 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divyajyoti NGO - Receipts & Payments</title>
-    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Web App Manifest -->
     <link rel="manifest" href="manifest.json">
-    <!-- Theme color for browser UI -->
     <meta name="theme-color" content="#4CAF50">
     <style>
         body {
@@ -53,7 +48,6 @@
             }
         }
     </style>
-    <!-- Firebase SDKs -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
@@ -233,7 +227,6 @@
             </form>
         </section>
 
-        <!-- Voucher Display Section -->
         <section id="voucher-section" class="hidden mb-8 p-6 border border-green-300 rounded-lg shadow-lg bg-white">
             <div class="text-center mb-6">
                 <h2 class="text-3xl font-bold text-emerald-800 mb-1">Divyajyoti Diristhihin Sewa Sansthan</h2>
@@ -242,7 +235,6 @@
             </div>
 
             <div class="grid grid-cols-2 gap-4 text-gray-800 text-base mb-6">
-                <!-- Voucher ID is now completely removed from display -->
                 <div>
                     <p><strong>Date:</strong> <span id="voucherDate"></span></p>
                 </div>
@@ -303,8 +295,7 @@
                     </tr>
                 </thead>
                 <tbody id="transactionTableBody" class="bg-white divide-y divide-gray-200">
-                    <!-- Data will be dynamically added here by JavaScript -->
-                </tbody>
+                    </tbody>
             </table>
         </div>
         <footer class="mt-8 text-center text-gray-500 text-sm no-print">
@@ -317,7 +308,7 @@
         import { getFirestore, addDoc, collection, query, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // IMPORTANT: This URL is now pre-filled with your deployed Google Apps Script Web App URL.
-        const GOOGLE_APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwQZXulQaZHZIFR1zT6k-Fxs-nBW0PDTVAgtpAhUoojjmv2gsKato13PaLlRhJwj1Ut/exec';
+        const GOOGLE_APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwNxuP4_TIuRny40ZIAuCAzQ42ZpjZmhK5w6SPOFfBQtVRZcMwY8ooHTeb_i-Hjbf0n/exec'; // <-- THIS LINE HAS BEEN UPDATED
 
         const transactionForm = document.getElementById('transactionForm');
         const generateVoucherBtn = document.getElementById('generateVoucherBtn');
